@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_QTHagPF2EeaqJ-W25Wq2EA" name="model">
+  <ownedComment xmi:id="_AZeL0PF3EeaqJ-W25Wq2EA" annotatedElement="_SwXgEPF2EeaqJ-W25Wq2EA">
+    <body>notify():&#xD;
+for all o in observers {&#xD;
+o->Update()&#xD;
+} </body>
+  </ownedComment>
+  <ownedComment xmi:id="_STNNgPF3EeaqJ-W25Wq2EA" annotatedElement="_UDeGsPF2EeaqJ-W25Wq2EA">
+    <body> observerState = subject->getState()</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SwXgEPF2EeaqJ-W25Wq2EA" name="Subject">
+    <ownedAttribute xmi:id="_3aNKwPF2EeaqJ-W25Wq2EA" name="observer" type="_TCiOIPF2EeaqJ-W25Wq2EA" association="_3aNKw_F2EeaqJ-W25Wq2EA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3aNKwfF2EeaqJ-W25Wq2EA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3aNKwvF2EeaqJ-W25Wq2EA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_xfdDkPF2EeaqJ-W25Wq2EA" name="attachObserver"/>
+    <ownedOperation xmi:id="_zIy_8PF2EeaqJ-W25Wq2EA" name="detachObserver"/>
+    <ownedOperation xmi:id="_z7OicPF2EeaqJ-W25Wq2EA" name="notify"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TCiOIPF2EeaqJ-W25Wq2EA" name="Observer">
+    <ownedOperation xmi:id="_q-OVwPF3EeaqJ-W25Wq2EA" name="update"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TkIfUPF2EeaqJ-W25Wq2EA" name="ConcreteSubject">
+    <generalization xmi:id="_iAT1APF2EeaqJ-W25Wq2EA" general="_SwXgEPF2EeaqJ-W25Wq2EA"/>
+    <ownedAttribute xmi:id="_sTO2UPF2EeaqJ-W25Wq2EA" name="subjectState" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tbh7IPF2EeaqJ-W25Wq2EA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tbh7IfF2EeaqJ-W25Wq2EA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_tbh7IvF2EeaqJ-W25Wq2EA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Zzr8YPF3EeaqJ-W25Wq2EA" name="Property1" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aRJ7gPF3EeaqJ-W25Wq2EA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aRJ7gfF3EeaqJ-W25Wq2EA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_aRJ7gvF3EeaqJ-W25Wq2EA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_ZC7N0PF3EeaqJ-W25Wq2EA" name="getState"/>
+    <ownedOperation xmi:id="_a8L1gPF3EeaqJ-W25Wq2EA" name="setState"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UDeGsPF2EeaqJ-W25Wq2EA" name="ConcreteObserver">
+    <generalization xmi:id="_ifedQPF2EeaqJ-W25Wq2EA" general="_TCiOIPF2EeaqJ-W25Wq2EA"/>
+    <ownedAttribute xmi:id="_o6k4cPF2EeaqJ-W25Wq2EA" name="observerState" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qKscgPF2EeaqJ-W25Wq2EA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qKscgfF2EeaqJ-W25Wq2EA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_qK1mcPF2EeaqJ-W25Wq2EA">
+        <value xsi:nil="true"/>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_Q9UYoPF3EeaqJ-W25Wq2EA" name="update"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3aNKw_F2EeaqJ-W25Wq2EA" name="notifies" memberEnd="_3aNKxPF2EeaqJ-W25Wq2EA _3aNKwPF2EeaqJ-W25Wq2EA">
+    <ownedEnd xmi:id="_3aNKxPF2EeaqJ-W25Wq2EA" name="subject" type="_SwXgEPF2EeaqJ-W25Wq2EA" association="_3aNKw_F2EeaqJ-W25Wq2EA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3aNKxfF2EeaqJ-W25Wq2EA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3aNKxvF2EeaqJ-W25Wq2EA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OTIqU_F3EeaqJ-W25Wq2EA" name="concreteSubject_concreteObserver_1" memberEnd="_OTIqVPF3EeaqJ-W25Wq2EA _OTIqUPF3EeaqJ-W25Wq2EA">
+    <ownedEnd xmi:id="_OTIqVPF3EeaqJ-W25Wq2EA" name="concreteSubject" type="_TkIfUPF2EeaqJ-W25Wq2EA" association="_OTIqU_F3EeaqJ-W25Wq2EA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OTIqVfF3EeaqJ-W25Wq2EA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OTIqVvF3EeaqJ-W25Wq2EA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_OTIqUPF3EeaqJ-W25Wq2EA" name="concreteObserver" type="_UDeGsPF2EeaqJ-W25Wq2EA" association="_OTIqU_F3EeaqJ-W25Wq2EA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OTIqUfF3EeaqJ-W25Wq2EA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OTIqUvF3EeaqJ-W25Wq2EA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
